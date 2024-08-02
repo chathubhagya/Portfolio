@@ -6,3 +6,13 @@ var typed=new Typed(".Text",{
     loop:true
 
 });
+function sendMail(){
+    let parms ={
+        name : document.getElementById("name").value ,
+        email : document.getElementById("email").value ,
+        subject : document.getElementById("subject").value ,
+        message : document.getElementById("message").value ,
+
+    }
+    emailjs.send("service_8bpsb16","template_gxkmvlh", parms).then(alert("emaill send!!"))
+}
